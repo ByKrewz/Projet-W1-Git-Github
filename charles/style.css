@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navHeight: 50px;
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    height: calc(100vh - var(--navHeight));
+}
