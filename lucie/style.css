@@ -2,26 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 :root{
     --black : #1b1c1e ;
+    --color : #f5d8b0 ;
+}
+
+body{    
+    background-color: #ffffff;
 }
 
 header{
     display: flex;
     flex-direction: row;
-    width: 90%;
-    position: fixed;
+    width: 95%;
+    margin: auto;
     top: 1px;
     padding:10px;
     font-size:1.1rem;
-    background-color: white;
-    /* box-shadow: 0 25px 45px rgba(0,0,0,0.1); */
-    height: 70px;
+    height: 90px;
     align-items: center;
-    border-bottom: #1b1c1e 2px solid;
+    border-bottom: var(--black) 2px solid;
 }
 
 header nav{
@@ -52,18 +55,19 @@ header nav ul li a{
     padding:0 10px;
     color: var(--black);
     text-decoration: none;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     font-weight: bold;
-    font-size: 22px;
-    font-style: italic;
+    font-size: 15px;
     /* font-family: 'Playfair Display', serif; */
 }
 
 header nav button{
     border: #1b1c1e 2px solid;
-    border-radius: 50px;
-    padding: 1rem ;
+    padding: 1rem 2rem ;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    margin-right: 20px;
+    box-shadow: #1b1c1e 5px 5px ;
+    background-color: var(--color);
 }
