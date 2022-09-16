@@ -4,7 +4,37 @@
     box-sizing: border-box;
 }
 
-body,html{
+body{
+    overflow-y: hidden;
     width: 100%;
+    height: 100vh;
+}
+
+:root{
+    --black : #1b1c1e ;
+    --color1: #999999;
+    --color2: #555555;
+    --color3: #111111;
+}
+
+body{
+    background-color:var(--color2) ;
+}
+
+main{
+    display: flex;
     height: 100%;
+    width: 100%;
+}
+
+.splitter{
+    height: 100%;
+    width: 1%;
+    background-color: var(--color3);
+    border-left: var(--black) 2px solid;
+    border-right: var(--black) 2px solid;
+}
+
+.left, .right, .mid{
+    width: 33%;
 }
