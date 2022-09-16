@@ -8,6 +8,7 @@
 :root{
     --black : #1b1c1e ;
     --color : #f5d8b0 ;
+    --vert: #b9ff82;
 }
 
 body{    
@@ -17,7 +18,8 @@ body{
 header{
     display: flex;
     flex-direction: row;
-    width: 95%;
+    position: fixed;
+    width: 100%;
     margin: auto;
     top: 1px;
     padding:10px;
@@ -25,6 +27,8 @@ header{
     height: 90px;
     align-items: center;
     border-bottom: var(--black) 2px solid;
+    background-color: white;
+    z-index: 10;
 }
 
 header nav{
@@ -32,6 +36,7 @@ header nav{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-left: 50px;
 }
 
 header nav img{
@@ -70,4 +75,198 @@ header nav button{
     margin-right: 20px;
     box-shadow: #1b1c1e 5px 5px ;
     background-color: var(--color);
+}
+
+main{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+main .haut {
+    display: flex;
+    flex-direction: row;
+}
+
+main .left{
+    height: 100px;
+    width: 60%;
+    margin: auto;
+    height: 700px;
+    margin-top: 130px;
+}
+
+main .left .titre a{
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+main .left .titre a img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+}
+
+main .left .titre h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+main .left .desc{
+    margin-top: 20px;
+    width: 80%;
+}
+
+main .left .desc p{
+    font-size: 20px;
+}
+
+main .left .desc button{
+    border: #1b1c1e 2px solid;
+    padding: 1rem 2rem ;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    box-shadow: #1b1c1e 5px 5px ;
+    background-color: var(--color);
+}
+
+main .left .desc button img{
+    width: 30px;
+    height: 30px;
+    margin: -10px 0 -10px 10px;
+}
+
+main .left .arrow{
+    width: 80%;
+}
+
+main .right{
+    width: 30%;
+}
+
+main .right .effect{
+    width: 100px;
+    margin-left: 400px;
+    transform: rotateY(180deg);
+}
+
+main .right .card{
+    width: 70%;
+}
+
+main .right .card img{
+    width: 100%;
+    border: #1b1c1e 2px solid;
+    box-shadow: #1b1c1e 15px 15px ;
+}
+
+main .right .fond{
+    height: 550px;
+    width: 400px;
+    background-color: var(--color);
+    position: absolute;
+    z-index: -1;
+    margin-top: -550px;
+    transform: rotate(15deg);
+    border: #1b1c1e 2px solid;
+    box-shadow: #1b1c1e 15px 15px ;
+}
+
+main .centre {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+main .centre .left{
+    width: 50%;
+    margin-right: 200px;
+    margin-left: 50px;
+}
+
+main .centre .left .effect{
+    width: 100px;    
+    transform: rotate(-15deg);
+    margin-top: -50px;
+    margin-bottom: -20px;
+}
+
+main .centre .left .card{
+    width: 100%;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+main .centre .left .card img{
+    width: 90%;
+    border-bottom: white 2px solid;
+    border-right: white 2px solid;
+    box-shadow: #1b1c1e 15px 15px ;
+}
+
+main .centre .left .fond{
+    height: 400px;
+    width: 750px;
+    background-color: var(--vert);
+    position: absolute;
+    z-index: -1;
+    margin-top: -420px;
+    margin-left: 210px;
+    transform: rotate(15deg);
+    border: #1b1c1e 2px solid;
+    box-shadow: #1b1c1e 15px 15px ;
+}
+
+main .centre .left .effect2{
+    width: 80px;
+    transform: rotate(180deg);
+    margin-left: 870px;
+    margin-top: 90px;
+}
+
+main .centre .right{
+    width: 50%;
+    text-align: end;
+    margin-top: 100px;
+}
+
+main .centre .right .titre h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+main .centre .right .desc{
+    margin-top: 20px;
+    width: 80%;
+}
+
+main .centre .right .desc p{
+    font-size: 20px;
+}
+
+main .centre .right .desc button{
+    border: #1b1c1e 2px solid;
+    padding: 1rem 2rem ;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    box-shadow: #1b1c1e 5px 5px ;
+    background-color: var(--vert);
+}
+
+main .centre .right .desc button img{
+    width: 30px;
+    height: 30px;
+    margin: -10px 10px -10px 0;
 }
