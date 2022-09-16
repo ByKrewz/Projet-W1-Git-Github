@@ -211,6 +211,10 @@ main .centre .left .card img{
     box-shadow: #1b1c1e 15px 15px ;
 }
 
+/* main .centre .left .card .projet{
+    display: none;
+} */
+
 main .centre .left .fond{
     height: 400px;
     width: 750px;
@@ -269,4 +273,219 @@ main .centre .right .desc button img{
     width: 30px;
     height: 30px;
     margin: -10px 10px -10px 0;
+}
+
+/* ------------------------------------RESPONSIVE------------------------------------ */
+
+@media screen and (max-width:760px) {
+   
+    header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    main{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    main .haut {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .left{
+        height: 100px;
+        width: 100%;
+        margin: auto;
+        margin-top: 130px;
+    }
+
+    main .left .titre a{
+        font-size: 15px;
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    main .left .titre a img{
+        width: 20px;
+        height: 20px;
+        margin-bottom: -5px;
+    }
+
+    main .left .titre h1{
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 30px;
+        text-transform: uppercase;
+    }
+
+    main .left .desc{
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    main .left .desc p{
+        font-size: 20px;
+    }
+
+    main .left .desc button{
+        border: #1b1c1e 2px solid;
+        padding: 1rem 2rem ;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20px;
+        box-shadow: #1b1c1e 5px 5px ;
+        background-color: var(--color);
+    }
+
+    main .left .desc button img{
+        display: none;
+    }
+
+    main .left .arrow{
+        width: 80%;
+    }
+
+    main .right{
+        width: 100%;
+    }
+
+    main .right .effect{
+        width: 90px;
+        margin-left: 250px;
+        margin-top: 450px;
+        transform: rotateY(180deg);
+        position: absolute;
+    }
+
+    main .right .card{
+        width: 80%;
+        margin-top: 550px;
+    }
+
+    main .right .card img{
+        width: 100%;
+        border: #1b1c1e 2px solid;
+        box-shadow: #1b1c1e 15px 15px ;
+    }
+
+    main .right .fond{
+        height: 350px;
+        width: 250px;
+        background-color: var(--color);
+        position: absolute;
+        z-index: -1;
+        margin-top: -410px;
+        margin-left: 50px;
+        transform: rotate(15deg);
+        border: #1b1c1e 2px solid;
+        box-shadow: #1b1c1e 15px 15px ;
+    }
+
+    main .centre {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main .centre .left{
+        width: 100%;
+        margin-right: 200px;
+        margin-left: 50px;
+    }
+
+    main .centre .left .effect{
+        display: none;
+    }
+
+    main .centre .left .card{
+        display: none;
+        width: 100%;
+        margin-left: -50px;
+        margin-top: 10px;
+    }
+
+    /* main .centre .left .card img{
+        display: none;
+    } */
+
+    main .centre .left .card .projet{
+        display: block;
+        /* width: 90%;
+        border-bottom: white 2px solid;
+        border-right: white 2px solid;
+        box-shadow: #1b1c1e 15px 15px ; */
+    }
+
+    main .centre .left .fond{
+        display: none;  
+        height: 150px;
+        width: 300px;
+        background-color: var(--vert);
+        position: absolute;
+        z-index: -1;
+        margin-top: -150px;
+        transform: rotate(15deg);
+        border: #1b1c1e 2px solid;
+        box-shadow: #1b1c1e 15px 15px ;
+    }
+
+    main .centre .left .effect2{
+        display: none;
+        width: 80px;
+        transform: rotate(180deg);
+        margin-left: 870px;
+        margin-top: 90px;
+    }
+
+    main .centre .right{
+        width: 100%;
+        text-align:left;
+        margin-top: -150px;
+        height: 600px;
+    }
+
+    main .centre .right .titre h1{
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 30px;
+        text-transform: uppercase;
+        width: 80%;
+    }
+
+    main .centre .right .desc{
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    main .centre .right .desc p{
+        font-size: 20px;
+    }
+
+    main .centre .right .desc button{
+        display: nonea;
+        border: #1b1c1e 2px solid;
+        padding: 1rem 2rem ;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20px;
+        box-shadow: #1b1c1e 5px 5px ;
+        background-color: var(--vert);
+    }
+
+    main .centre .right .desc button img{
+        width: 30px;
+        height: 30px;
+        margin: -10px 10px -10px 0;
+    }
+    
 }
