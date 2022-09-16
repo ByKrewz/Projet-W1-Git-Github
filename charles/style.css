@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transform-style: preserve-3d;
 }
 
 :root {
@@ -9,6 +10,7 @@
 }
 
 body {
+    overflow-x: hidden;
     min-height: 100vh;
     background: grey;
 }
@@ -18,9 +20,16 @@ header {
     background-color: red;
 }
 
-/* main {
-    height: calc(100vh - var(--navHeight));
-} */
+main {
+    /* height: calc(100vh - var(--navHeight)); */
+    position: relative;
+}
+
+.scene {
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
 
 section {
     height: calc(100vh - var(--navHeight));
@@ -34,14 +43,14 @@ section > .card__container {
     background: white;
 }
 
-section:nth-of-type(1) > .card__container {
-    transform: rotateY(0deg) translateZ(200px);
+section:nth-of-type(1) {
+    transform: rotateY(0deg) translateZ(400px);
 }
 
-section:nth-of-type(2) > .card__container {
-    transform: rotateY(-60deg) translateZ(200px);
+section:nth-of-type(2) {
+    transform: rotateY(-120deg) translateZ(400px);
 }
 
-section:nth-of-type(3) > .card__container {
-    transform: rotateY(-120deg) translateZ(-200px);
+section:nth-of-type(3) {
+    transform: rotateY(-240deg) translateZ(400px);
 }
