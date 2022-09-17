@@ -1,16 +1,16 @@
 "use strict"
 
 function getScrollPercent() {
-    var h = document.documentElement, 
-        b = document.body,
+    var h = document.querySelector('main'), 
         st = 'scrollTop',
         sh = 'scrollHeight';
-    return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+    return (h[st]) / ((h[sh]) - h.clientHeight) * 100;
 }
 
-window.addEventListener("scroll", (e) => {
+document.querySelector("main").addEventListener("scroll", (e) => {
     console.log(getScrollPercent())
-    document.querySelector(".scene").style.transform = `rotateY(${getScrollPercent() / 100 * 270}deg) translateY(${getScrollPercent() / 100 * 900}px)`
+    document.querySelector(".scene").style.transform = `rotateY(${getScrollPercent() / 100 * 240}deg)`
+    // document.querySelector(".scene").style.transform = `rotateY(${getScrollPercent() / 100 * 240}deg) translateY(${getScrollPercent() / 100 * 900}px)`
     // console.log(`-${getScrollPercent() * 2}px`)
     // document.querySelector(".scene").style.top = `-${getScrollPercent() / 100 * 300}px`
 

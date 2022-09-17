@@ -5,17 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./../nav.css">
+    <link rel="stylesheet" href="../nav.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-
+        <nav>
+            <button>Home</button>
+            <ul>
+                <li><a href="../lucie/charles.html">Charles</a></li>
+                <li><a href="../tom/lucie.html">Lucie</a></li>
+                <li><a href="../charles/tom.html">Tom</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="scene">
             <section>
-                <div class="card__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aperiam, omnis quibusdam perspiciatis repudiandae facere id exercitationem necessitatibus sequi, dolores eaque, veniam enim doloribus quod nisi corporis obcaecati quia. Corrupti praesentium et voluptatem a voluptates vel? Sed cupiditate rem laudantium.</div>
+                <div class="card__container">
+                    <div class="profile__top">
+                        <div class="profile__picture">
+                            <img src="./images/ali_gator.jpg" alt="ali_gator">
+                        </div>
+                        <div>
+                            <div class="bio__names">
+                                <h2 class="bio__name">Tom Tamen</h2>
+                                <h4 class="bio__surnames">Python<span class="separator"></span>Mastermind<span class="separator"></span>27</h4>
+                            </div>
+                            <div class="bio__networks">
+                                <h4>Réseaux Sociaux : </h4>
+                                <a href="https://www.linkedin.com/in/tom-tamen-ab9ab9222/">
+                                    <ion-icon name="logo-linkedin" style="color: #0e76a8;"></ion-icon>
+                                    Tom Tamen
+                                </a>
+                                <a href="https://github.com/ByKrewz">
+                                    <ion-icon name="logo-github"></ion-icon>    
+                                    ByKrewz
+                                </a>
+                                <a href="https://github.com/ByKrewz">
+                                    <ion-icon name="logo-discord" style="color: #7289da;"></ion-icon>
+                                    ByKrewz#XXXX
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="profile__description">
+                            Tom Tamen est un élève en <span>Coding et Digital Innovation</span> à l'IIM - Digital School Paris, à l'aube de son année préparatoire il hésite entre l'axe Jeu Vidéo et l'axe Développement Web. Il découvre une rapidement Garimé, et se découvre en parallèle une appétence pour le back-end, ce qui fini de le convaincre d'aller au CDI.
+                    </p>
+                    <div class="bio__quote">
+                        <q>On peut générer des divs</q>
+                    </div>
+                </div>
             </section>
             <section>
                 <div class="card__container">
@@ -31,5 +71,7 @@
         </div>
     </main>
     <script src="./main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
