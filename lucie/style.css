@@ -211,9 +211,9 @@ main .centre .left .card img{
     box-shadow: #1b1c1e 15px 15px ;
 }
 
-/* main .centre .left .card .projet{
+main .centre .left .card .projet{
     display: none;
-} */
+}
 
 main .centre .left .fond{
     height: 400px;
@@ -238,7 +238,7 @@ main .centre .left .effect2{
 main .centre .right{
     width: 50%;
     text-align: end;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 main .centre .right .titre h1{
@@ -360,8 +360,8 @@ main .centre .right .desc button img{
 
     main .right .effect{
         width: 90px;
-        margin-left: 250px;
-        margin-top: 450px;
+        margin-left: 270px;
+        margin-top: 440px;
         transform: rotateY(180deg);
         position: absolute;
     }
@@ -385,7 +385,7 @@ main .centre .right .desc button img{
         z-index: -1;
         margin-top: -410px;
         margin-left: 50px;
-        transform: rotate(15deg);
+        transform: rotate(5deg);
         border: #1b1c1e 2px solid;
         box-shadow: #1b1c1e 15px 15px ;
     }
@@ -403,39 +403,38 @@ main .centre .right .desc button img{
     }
 
     main .centre .left .effect{
-        display: none;
+        margin-top: 550px;
+        margin-left: -50px;
+        position: absolute;
     }
 
     main .centre .left .card{
-        display: none;
         width: 100%;
-        margin-left: -50px;
-        margin-top: 10px;
+        margin-left: -40px;
+        margin-top: 680px;
+        height: 600px;
     }
 
-    /* main .centre .left .card img{
+    main .centre .left .card img{
         display: none;
-    } */
+    }
 
     main .centre .left .card .projet{
         display: block;
-        /* width: 90%;
-        border-bottom: white 2px solid;
-        border-right: white 2px solid;
-        box-shadow: #1b1c1e 15px 15px ; */
+        width: 80%;
     }
 
     main .centre .left .fond{
-        display: none;  
-        height: 150px;
-        width: 300px;
+        height: 450px;
+        width: 250px;
         background-color: var(--vert);
         position: absolute;
         z-index: -1;
-        margin-top: -150px;
+        margin-top: -600px;
         transform: rotate(15deg);
         border: #1b1c1e 2px solid;
         box-shadow: #1b1c1e 15px 15px ;
+        margin-left: -8px;
     }
 
     main .centre .left .effect2{
