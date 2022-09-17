@@ -12,9 +12,10 @@ body{
 
 :root{
     --black : #1b1c1e ;
-    --color1: #999999;
-    --color2: #555555;
-    --color3: #111111;
+    --color1: #f5d8b0;
+    --color2: #CA054D;
+    --color3: #3B1C32;
+    --color4: #EF065B;
 }
 
 body{
@@ -27,14 +28,22 @@ main{
     width: 100%;
 }
 
+
 h1,h2{
-    font-size: 35px;
+    border: #1b1c1e 2px solid;
+    padding: 1rem 2rem ;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 20px;
+    box-shadow: #1b1c1e 5px 5px ;
+    background-color: var(--color);
 }
 
 .splitter{
     height: 100%;
     width: 1%;
-    background-color: var(--color3);
+    background-color: white;
     border-left: var(--black) 2px solid;
     border-right: var(--black) 2px solid;
 }
@@ -51,7 +60,8 @@ h1,h2{
 .text{
     width: 70%;
     height: fit-content;
-    background-color: var(--color1);
+    border: solid 3px var(--color1);
+    background-color: var(--color4);
     border-radius: 40px;
     text-align: center;
     padding: 20px;
@@ -128,6 +138,10 @@ h3{
     font-size: 30px;
 }
 
+h1, h2, h3{
+    color: var(--color3);
+}
+
 .pencil{
     width: 180px;
     height: auto;
@@ -170,7 +184,8 @@ h3{
 } 
 
 .midoneLeft, .midtwoRight, .projetTxt{
-    background-color: var(--color1);
+    border: solid 3px var(--color1);
+    background-color: var(--color4);
     padding: 15px;
     border-radius: 20px;
 }
@@ -205,7 +220,7 @@ h3{
 
 main a{
     text-decoration: none;
-    color: var(--color2);
+    color: var(--color1);
 }
 @keyframes bowl {
     from {
