@@ -14,7 +14,10 @@
 /* ------------------------------------HEADER------------------------------------ */
 
 body{    
-    background-color: #ffffff;
+    background-image:url("../lucie/images/fond.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow-x: hidden;
 }
 
 header{
@@ -78,9 +81,10 @@ header nav button{
     background-color: var(--color);
 }
 
-/* header nav button .inverted{
+
+button.inverted {
     background-color: var(--vert);
-} */
+}
 
 
 /* ------------------------------------HEADER------------------------------------ */
@@ -322,6 +326,14 @@ main .centre .right .desc button img{
 
 /* ------------------------------------RIGHT------------------------------------ */
 /* ------------------------------------MAIN/CENTRE------------------------------------ */
+
+main .fond-bas{
+    position: absolute;
+    z-index: -5;
+    margin-top: 950px;
+    margin-left: 650px;
+}
+
 /* ------------------------------------RESPONSIVE------------------------------------ */
 
 @media screen and (max-width:760px) {
@@ -334,6 +346,10 @@ main .centre .right .desc button img{
         justify-content: space-between;
         width: 100%;
         margin-left: 10px;
+    }
+
+    body{
+        background-image:none;
     }
 
 /* ------------------------------------MAIN/HAUT------------------------------------ */
@@ -399,7 +415,7 @@ main .centre .right .desc button img{
         font-size: 20px;
         font-weight: bold;
         text-transform: uppercase;
-        margin-top: 20px;
+        margin-top: 40px;
         box-shadow: #1b1c1e 5px 5px ;
         background-color: var(--color);
     }
