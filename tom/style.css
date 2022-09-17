@@ -89,3 +89,73 @@ h1,h2{
         transform: rotate(0deg);
     }
 } 
+
+.midone, .midtwo{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.midoneLeft, .midoneRight, .midtwoLeft, .midtwoRight{
+    width: 45%;
+    height: fit-content;
+    font-size: 20px;
+    
+}
+
+.midtwoLeft, .midoneRight{
+    display: flex;
+    justify-content: center;
+}
+
+.midtwoRight{
+    text-align: right;
+}
+
+h3{
+    font-size: 30px;
+}
+
+.pencil{
+    width: 180px;
+    height: auto;
+    animation: pencil 1.5s infinite;
+}
+
+.code{
+    width: 200px;
+    height: auto;
+    animation: code 1.5s infinite;
+}
+
+@keyframes pencil {
+    from {
+        transform: rotate(-130deg);
+    }
+    50%{
+        transform: rotate(-122deg);
+    }
+    70%{
+        transform: rotate(-122deg);
+    }
+    to {
+        transform: rotate(-130deg);
+    }
+} 
+@keyframes code {
+    from {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    70%{
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+} 
