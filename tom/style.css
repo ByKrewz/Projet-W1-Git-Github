@@ -58,8 +58,16 @@ h1,h2{
     font-size: 20px;
 }
 
+.leftcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
 .lucie{
     position: relative;
+    max-width: 256px;
 }
 
 .lucietxt{
@@ -89,6 +97,7 @@ h1,h2{
         transform: rotate(0deg);
     }
 } 
+
 
 .midone, .midtwo{
     width: 100%;
@@ -188,34 +197,17 @@ h3{
 }
 
 .imagesPj img:nth-child(even){
-    animation: sushi 1s infinite;
+    animation: sushi 2s infinite;
 }
 .imagesPj img:nth-child(odd){
-    animation: bowl 1s infinite;
+    animation: bowl 2s infinite;
 }
 
-/* @keyframes bowl {
-    from {
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(10deg);
-    }
-    70%{
-        transform: rotate(10deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}  */
 @keyframes bowl {
     from {
         transform: translateY(0px);
     }
     50%{
-        transform: translateY(10px);
-    }
-    70%{
         transform: translateY(10px);
     }
     to {
@@ -230,10 +222,102 @@ h3{
     50%{
         transform: translateY(0px);
     }
-    70%{
-        transform: translateY(0px);
-    }
     to {
         transform: translateY(10px);
     }
 } 
+
+@media screen and (max-width: 1900px) {
+    body{
+        overflow-y: scroll;
+        height: 100%;
+        width: 100%;
+    }
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left,.mid,.right{
+        width: 80%;
+    }
+    .leftcont{
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    .splitter{
+        height: 10px;
+        width: 100%;
+        border: var(--black) 2px 0 2px 0 solid;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .lucie{
+        width: 40%;
+        height: auto;
+    }
+    .arrow{
+        width: 100px;
+        height: auto;
+    }
+    .lucietxt{
+        height: 40px;
+        width: auto;
+    }
+    .luciedraw{
+        width: 150px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .leftcont{
+        flex-direction: column;
+        width: 100%;
+    }
+    .text{
+        width: 90%;
+    }
+    .left, .mid, .right{
+        width: 100%;
+    }
+    .projetlucie{
+        width: 400px;
+    }
+    .arrow{
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .lucie{
+        width: 100%;
+    }
+    .lucietxt{
+        right: 100px;
+    }
+    .arrow{
+        right: 60px;
+    }
+    .projetlucie{
+        width: 300px;
+    }
+    .pencil, .code{
+        width: 100px;
+    }
+    .midone, .midtwo{
+        flex-direction: column;
+    }
+
+    .midoneLeft, .midtwoRight{
+        width: 100%;
+        text-align: center;
+    }
+    .midtwoRight{
+        order: -1;
+    }
+    .imagesPj img{
+        width: 100px;
+    }
+}
