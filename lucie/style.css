@@ -65,7 +65,6 @@ header nav ul li a{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 15px;
-    /* font-family: 'Playfair Display', serif; */
 }
 
 header nav button{
@@ -134,10 +133,12 @@ main .left .titre h1{
 main .left .desc{
     margin-top: 20px;
     width: 80%;
+    text-align: end;
 }
 
 main .left .desc p{
     font-size: 20px;
+    text-align: start;
 }
 
 main .left .desc button{
@@ -146,7 +147,7 @@ main .left .desc button{
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 50px;
     box-shadow: #1b1c1e 5px 5px ;
     background-color: var(--color);
 }
@@ -157,7 +158,11 @@ main .left .desc button img{
     margin: -10px 0 -10px 10px;
 }
 
-
+main .left .arrow{
+    width: 18%;
+    margin-left: 900px;
+    margin-top: 50px;
+}
 
 /* ------------------------------------LEFT------------------------------------ */
 /* ------------------------------------RIGHT------------------------------------ */
@@ -265,21 +270,37 @@ main .centre .right{
     margin-top: 200px;
 }
 
+main .centre .right .titre{
+    display: flex;
+    flex-direction: row;
+}
+
+main .centre .right .titre p{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left:220px;
+    margin-top: 30px;
+}
+
 main .centre .right .titre h1{
     font-size: 50px;
     font-weight: bold;
     margin-top: 30px;
     text-transform: uppercase;
-    width: 80%;
+    width: 67%;
+    margin-left: -220px;
 }
 
 main .centre .right .desc{
     margin-top: 20px;
     width: 80%;
+    text-align: left;
 }
 
 main .centre .right .desc p{
     font-size: 20px;
+    text-align: right;
 }
 
 main .centre .right .desc button{
@@ -288,7 +309,7 @@ main .centre .right .desc button{
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 50px;
     box-shadow: #1b1c1e 5px 5px ;
     background-color: var(--vert);
 }
@@ -383,10 +404,6 @@ main .centre .right .desc button img{
         background-color: var(--color);
     }
 
-    main .left .desc button img{
-        display: none;
-    }
-
     main .left .arrow{
         width: 80%;
     }
@@ -396,6 +413,7 @@ main .centre .right .desc button img{
 
     main .right{
         width: 100%;
+        margin-top: 30px;
     }
 
     main .right .effect{
@@ -461,10 +479,6 @@ main .centre .right .desc button img{
         height: 600px;
     }
 
-    main .centre .left .card img{
-        display: none;
-    }
-
     main .centre .left .card .projet{
         display: block;
         width: 80%;
@@ -483,14 +497,6 @@ main .centre .right .desc button img{
         margin-left: -8px;
     }
 
-    main .centre .left .effect2{
-        display: none;
-        width: 80px;
-        transform: rotate(180deg);
-        margin-left: 870px;
-        margin-top: 90px;
-    }
-
 /* ------------------------------------LEFT------------------------------------ */
 /* ------------------------------------RIGHT------------------------------------ */
 
@@ -507,6 +513,7 @@ main .centre .right .desc button img{
         margin-top: 30px;
         text-transform: uppercase;
         width: 80%;
+        margin-left: 0;
     }
 
     main .centre .right .desc{
@@ -516,10 +523,10 @@ main .centre .right .desc button img{
 
     main .centre .right .desc p{
         font-size: 20px;
+        text-align: left;
     }
 
     main .centre .right .desc button{
-        display: nonea;
         border: #1b1c1e 2px solid;
         padding: 1rem 2rem ;
         font-size: 20px;
