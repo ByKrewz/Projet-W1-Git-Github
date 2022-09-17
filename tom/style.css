@@ -32,7 +32,7 @@ main{
 h1,h2{
     border: #1b1c1e 2px solid;
     padding: 1rem 2rem ;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
     margin-right: 20px;
@@ -66,6 +66,7 @@ h1,h2{
     text-align: center;
     padding: 20px;
     font-size: 20px;
+    box-shadow: #1b1c1e 5px 5px ;
 }
 
 .leftcont{
@@ -188,11 +189,13 @@ h1, h2, h3{
     background-color: var(--color4);
     padding: 15px;
     border-radius: 20px;
+    box-shadow: #1b1c1e 5px 5px ;
 }
 
 .projetlucie{
     width: 500px;
     height: auto;
+    border: solid 3px var(--color3);
 }
 
 .right{
@@ -267,7 +270,10 @@ main a{
     .splitter{
         height: 10px;
         width: 100%;
-        border: var(--black) 2px 0 2px 0 solid;
+        border-top: var(--black) 2px solid;
+        border-bottom: var(--black) 2px solid;
+        border-left: none;
+        border-right: none;
     }
 }
 
