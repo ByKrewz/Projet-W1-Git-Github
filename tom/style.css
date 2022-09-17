@@ -203,6 +203,10 @@ h3{
     animation: bowl 2s infinite;
 }
 
+main a{
+    text-decoration: none;
+    color: var(--color2);
+}
 @keyframes bowl {
     from {
         transform: translateY(0px);
