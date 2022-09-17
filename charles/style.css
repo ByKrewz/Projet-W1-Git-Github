@@ -11,6 +11,7 @@
     --black : #1b1c1e ;
     --color : #f5d8b0 ;
     --vert: #b9ff82;
+    --animationTime: 4s;
 }
 
 body{
@@ -226,14 +227,152 @@ section > .card__container {
 .bio__networks a {
     display: flex;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .bio__networks > a > ion-icon{
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .bio__quote {
     display: flex;
     justify-content: center;
+}
+
+.hobby__animation {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background-image: url("./images/image1.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.animation__movable {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    aspect-ratio: 15 / 10;
+    animation: boat var(--animationTime) infinite cubic-bezier(.42,.07,.86,1.16);
+    overflow: hidden;
+}
+
+.animation__boat {
+    position: absolute;
+    aspect-ratio: 15 / 10;
+    width: 100%;
+    background-image: url("./images/bato.jpg");
+    background-position: center;
+    background-size: cover;
+    scale: -1 1;
+    clip-path: polygon(0 37%, 100% 55%, 100% 72%, 0 59%);
+}
+
+.animation__head {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: 25%;
+    top: 10%;
+    left: 40%;
+    transform-origin: center bottom;
+    background-image: url("./images/bato.jpg");
+    background-position: center;
+    background-size: cover;
+    scale: -1 1;
+    animation: head calc(var(--animationTime) / 2) infinite alternate;
+}
+
+.animation__ram1, .animation__ram2 {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: 25%;
+    transform-origin: 30% 80%;
+}
+
+.animation__ram1 {
+    left: 32%;
+    top: 21%;
+    rotate: z 210deg;
+    animation: ram1 infinite 2s;
+}
+
+.animation__ram2 {
+    left: 48.5%;
+    top: 26%;
+    rotate: z 90deg;
+    animation: ram2 infinite 2s;
+}
+
+@keyframes boat {
+    from {
+        bottom: 0;
+        left: 0;
+        scale: 1 1;
+    }
+    39.999% {
+        display: none;
+        scale: 1 1;
+    }
+    40% {
+        display: block;
+        bottom: 50%;
+        left: 45%;
+        scale: -1 1;
+    }
+    59.999% {
+        display: none;
+        scale: -1 1;
+    }
+    60% {
+        bottom: 10%;
+        left: 50%;
+        scale: 1 1;
+    }
+    65% {
+        bottom: 7.5%;
+        left: 45%;
+    }
+    70% {
+        bottom: 5%;
+        left: 40%;
+    }
+    to {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@keyframes head {
+    from {
+        rotate: z -20deg;
+    }
+    to {
+        rotate: z 20deg;
+    }
+}
+
+@keyframes ram1 {
+    from {
+        rotate: z 210deg;
+    }
+    50% {
+        rotate: z 180deg;
+
+    }
+    to {
+        rotate: z 210deg;
+    }
+}
+
+@keyframes ram2 {
+    from {
+        rotate: z 90deg;
+    }
+    50% {
+        rotate: z 180deg;
+
+    }
+    to {
+        rotate: z 90deg;
+    }
 }
