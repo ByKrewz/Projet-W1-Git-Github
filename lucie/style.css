@@ -79,6 +79,11 @@ header nav button{
     background-color: var(--color);
 }
 
+/* header nav button .inverted{
+    background-color: var(--vert);
+} */
+
+
 /* ------------------------------------HEADER------------------------------------ */
 /* ------------------------------------MAIN------------------------------------ */
 
@@ -152,9 +157,7 @@ main .left .desc button img{
     margin: -10px 0 -10px 10px;
 }
 
-main .left .arrow{
-    width: 80%;
-}
+
 
 /* ------------------------------------LEFT------------------------------------ */
 /* ------------------------------------RIGHT------------------------------------ */
@@ -322,6 +325,10 @@ main .centre .right .desc button img{
         margin-top: 0px;
     }
     
+    main .hide{
+        display: none;
+    }
+    
 /* ------------------------------------LEFT------------------------------------ */
 
     main .haut {
@@ -363,6 +370,7 @@ main .centre .right .desc button img{
     main .left .desc p{
         font-size: 20px;
     }
+
 
     main .left .desc button{
         border: #1b1c1e 2px solid;
