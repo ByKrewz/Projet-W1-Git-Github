@@ -159,3 +159,81 @@ h3{
         transform: rotate(0deg);
     }
 } 
+
+.midoneLeft, .midtwoRight, .projetTxt{
+    background-color: var(--color1);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.projetlucie{
+    width: 500px;
+    height: auto;
+}
+
+.right{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.imagesPj{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.imagesPj img{
+    width: 150px;
+    height: auto;
+}
+
+.imagesPj img:nth-child(even){
+    animation: sushi 1s infinite;
+}
+.imagesPj img:nth-child(odd){
+    animation: bowl 1s infinite;
+}
+
+/* @keyframes bowl {
+    from {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    70%{
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}  */
+@keyframes bowl {
+    from {
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    70%{
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+} 
+
+@keyframes sushi {
+    from {
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+} 
