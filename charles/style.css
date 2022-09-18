@@ -1,0 +1,476 @@
+/* fix nav bar */
+
+header nav{
+    justify-content: start;
+}
+
+/* fix nav bar */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+:root {
+    --navHeight: 90px;
+    --translateValue: 25vh;
+    --color : #f5d8b0;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    background: #f5d8b0;
+    position: relative;
+}
+
+main {
+    /* height: calc(100vh - var(--navHeight)); */
+    position: absolute;
+    bottom: 0;
+
+    height: calc(100vh - var(--navHeight));
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    /* margin: 16px 0 0 0; */
+}
+
+.scene {
+    display: grid;
+    place-items: center;
+    
+}
+
+.scene > section {
+    height: calc(100vh - var(--navHeight));
+    width: 100%;
+    padding: 0 16px;
+    display: grid;
+    place-items: center;
+    scroll-snap-align: start;
+}
+
+
+section:nth-of-type(1) {
+    transform: rotateY(0deg) translateZ(var(--translateValue));
+}
+
+section:nth-of-type(2) {
+    transform: rotateY(-120deg) translateZ(var(--translateValue));
+}
+
+section:nth-of-type(3) {
+    transform: rotateY(-240deg) translateZ(var(--translateValue));
+}
+
+section > .card__container {
+    width: 100%;
+    height: calc(100% - 32px);
+    border-radius: 8px;
+    background: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow-y: scroll; */
+}
+
+.profile__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__picture {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+}
+
+.top__namesNetworks {
+    width: 100%;
+}
+
+.profile__bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* flex: 1 1 auto; */
+}
+
+.profile__picture img{
+    width: 75%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.bio__name, .bio__surnames {
+    text-align: center;
+}
+
+.bio__surnames {
+    margin-bottom: 1rem;
+}
+
+.bio__surnames > span.separator {
+    width: 1px;
+    height: 100%;
+    border: solid 1px grey;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.bio__networks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.bio__networks > h4 {
+    margin-bottom: 0.5rem;
+}
+
+.bio__networks a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.bio__networks > a > ion-icon{
+    font-size: 1.5rem;
+}
+
+.bio__quote {
+    display: flex;
+    justify-content: center;
+}
+
+.projects__lore {
+    margin-bottom: 1rem;
+}
+
+.projects > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects__poc {
+    display: grid;
+    grid-template-areas: 
+            "login login blog"
+            "sub admin admin";
+    aspect-ratio: 3 / 2;
+    gap: 0.5rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 1rem;
+}
+
+.poc__imgContainer {
+    grid-area: var(--area);
+    /* height: calc(50% - 0.5rem / 2); */
+    height: 100%;
+    /* min-height: 0; */
+    /* aspect-ratio: 1 / 1; */
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.poc__imgContainer.rect {
+    aspect-ratio: 2 / 1;
+}
+
+.poc__imgContainer.carre {
+    aspect-ratio: 1 / 1;
+}
+
+.poc__img {
+    width: 100%;
+}
+
+.projects__poc > .poc__imgContainer:nth-child(1) > img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.projects > p {
+    text-align: center;
+}
+
+.hobby a, .projects a {
+    position: relative;
+}
+
+.hobby a::after, .projects a::after {
+    position: absolute;
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 2px var(--color);
+}
+
+.hobby__florian {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobby__florian > p {
+    margin-bottom: 0.5rem;
+}
+
+.hobby__florian > img {
+    width: 50%;
+}
+
+.hobby__animation {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background-image: url("./images/image1.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.animation__movable {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    aspect-ratio: 15 / 10;
+    animation: boat var(--animationTime) infinite cubic-bezier(.42,.07,.86,1.16);
+    overflow: hidden;
+}
+
+.animation__boat {
+    position: absolute;
+    aspect-ratio: 15 / 10;
+    width: 100%;
+    background-image: url("./images/bato.jpg");
+    background-position: center;
+    background-size: cover;
+    scale: -1 1;
+    clip-path: polygon(0 37%, 100% 55%, 100% 72%, 0 59%);
+}
+
+.animation__head {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: 25%;
+    top: 10%;
+    left: 40%;
+    transform-origin: center bottom;
+    background-image: url("./images/bato.jpg");
+    background-position: center;
+    background-size: cover;
+    scale: -1 1;
+    animation: head calc(var(--animationTime) / 2) infinite alternate;
+}
+
+.animation__ram1, .animation__ram2 {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: 25%;
+    transform-origin: 30% 80%;
+}
+
+.animation__ram1 {
+    left: 32%;
+    top: 21%;
+    rotate: z 210deg;
+    animation: ram1 infinite 2s;
+}
+
+.animation__ram2 {
+    left: 48.5%;
+    top: 26%;
+    rotate: z 90deg;
+    animation: ram2 infinite 2s;
+}
+
+.hobby__animationGroupe {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobby__animationGroupe > p {
+    margin-bottom: 1rem;
+}
+
+.hobby {
+    text-align: center;
+}
+
+@keyframes boat {
+    from {
+        bottom: 0;
+        left: 0;
+        scale: 1 1;
+    }
+    39.999% {
+        display: none;
+        scale: 1 1;
+    }
+    40% {
+        display: block;
+        bottom: 50%;
+        left: 45%;
+        scale: -1 1;
+    }
+    59.999% {
+        display: none;
+        scale: -1 1;
+    }
+    60% {
+        bottom: 10%;
+        left: 50%;
+        scale: 1 1;
+    }
+    65% {
+        bottom: 7.5%;
+        left: 45%;
+    }
+    70% {
+        bottom: 5%;
+        left: 40%;
+    }
+    to {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@keyframes head {
+    from {
+        rotate: z -20deg;
+    }
+    to {
+        rotate: z 20deg;
+    }
+}
+
+@keyframes ram1 {
+    from {
+        rotate: z 210deg;
+    }
+    50% {
+        rotate: z 180deg;
+
+    }
+    to {
+        rotate: z 210deg;
+    }
+}
+
+@keyframes ram2 {
+    from {
+        rotate: z 90deg;
+    }
+    50% {
+        rotate: z 180deg;
+
+    }
+    to {
+        rotate: z 90deg;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .bio__networks {
+        flex-direction: row;
+    }
+    .bio__networks > h4 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .profile__picture {
+        width: 75%;
+    }
+    .hobby__florian {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .hobby__florian > p{
+       width: 50%;
+       margin-left: 2rem;
+    }
+    .hobby__animationGroupe {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hobby__animationGroupe > p{
+        padding-right: 2rem;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    section > .card__container {
+        padding: 2rem 10%;
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+    section > .card__container {
+        padding: 2rem 10%;
+    }
+    .profile__top {
+        flex-direction: row;
+    }
+    .profile__picture {
+        width: 50%;
+    }
+    .projects > div{
+        /* 
+        height: 10%; */
+    }
+    .projects .projects__poc{
+        width: 50%;
+        /* height: 10%; */
+    }
+    .hobby__florian > img {
+        width: 50%;
+    }
+    .hobby__animationGroupe {
+        justify-content: center;
+    }
+    .hobby__animationGroupe > div {
+        width: 50%;
+    }
+    .hobby__animationGroupe {
+        flex-direction: row;
+    }
+    .hobby__animationGroupe > p{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hobby__florian > img {
+        width: 30%;
+    }
+    .hobby__animationGroupe > div {
+        width: 40%;
+    }
+}
