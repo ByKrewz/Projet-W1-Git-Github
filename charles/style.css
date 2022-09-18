@@ -22,6 +22,7 @@ a {
     --navHeight: 90px;
     --translateValue: 25vh;
     --color : #f5d8b0;
+    --animationTime: 4s;
 }
 
 body {
@@ -468,7 +469,7 @@ section > .card__container {
 
 @media screen and (min-width: 1024px) {
     .hobby__florian > img {
-        width: 30%;
+        width: 25%;
     }
     .hobby__animationGroupe > div {
         width: 40%;
