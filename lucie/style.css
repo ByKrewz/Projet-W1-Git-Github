@@ -79,8 +79,19 @@ header nav button{
     margin-right: 20px;
     box-shadow: #1b1c1e 5px 5px ;
     background-color: var(--color);
+    border-radius: 40px;
 }
 
+header nav button a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+header nav button:active {
+    box-shadow: none;
+    transform: translate(5px, 5px);
+}
+  
 button.inverted {
     background-color: var(--vert);
 }
@@ -153,12 +164,12 @@ main .left .desc button{
     margin-top: 50px;
     box-shadow: #1b1c1e 5px 5px ;
     background-color: var(--color);
+    border-radius: 40px;
 }
 
-main .left .desc button img{
-    width: 30px;
-    height: 30px;
-    margin: -10px 0 -10px 10px;
+main .left .desc button:active {
+    box-shadow: none;
+    transform: translate(5px, 5px);
 }
 
 main .left .arrow{
@@ -188,6 +199,7 @@ main .right .card img{
     width: 100%;
     border: #1b1c1e 2px solid;
     box-shadow: #1b1c1e 15px 15px ;
+    border-radius: 20px;
 }
 
 main .right .fond{
@@ -200,6 +212,7 @@ main .right .fond{
     transform: rotate(15deg);
     border: #1b1c1e 2px solid;
     box-shadow: #1b1c1e 15px 15px ;
+    border-radius: 20px;
 }
 
 /* ------------------------------------RIGHT------------------------------------ */
@@ -238,6 +251,7 @@ main .centre .left .card img{
     border-bottom: white 2px solid;
     border-right: white 2px solid;
     box-shadow: #1b1c1e 15px 15px ;
+    border-radius: 20px;
 }
 
 main .centre .left .card .projet{
@@ -255,6 +269,7 @@ main .centre .left .fond{
     transform: rotate(15deg);
     border: #1b1c1e 2px solid;
     box-shadow: #1b1c1e 15px 15px ;
+    border-radius: 20px;
 }
 
 main .centre .left .effect2{
@@ -315,6 +330,12 @@ main .centre .right .desc button{
     margin-top: 50px;
     box-shadow: #1b1c1e 5px 5px ;
     background-color: var(--vert);
+    border-radius: 40px;
+}
+
+main .centre .right .desc button:active {
+    box-shadow: none;
+    transform: translate(5px, 5px);
 }
 
 main .centre .right .desc button img{
