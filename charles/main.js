@@ -1,5 +1,8 @@
 "use strict"
 
+// fix scrol snap type laggy on chrome
+if (window.chrome) document.querySelector("main").style.scrollSnapType = "inherit"
+
 function getScrollPercent() {
     var h = document.querySelector('main'), 
         st = 'scrollTop',
