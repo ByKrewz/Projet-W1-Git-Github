@@ -11,8 +11,6 @@
     --vert: #b9ff82;
 }
 
-/* ------------------------------------HEADER------------------------------------ */
-
 body{    
     background-image:url("../lucie/images/fond.png");
     background-repeat: no-repeat;
@@ -20,13 +18,15 @@ body{
     overflow-x: hidden;
 }
 
+/* ------------------------------------HEADER------------------------------------ */
+
 header{
     display: flex;
     flex-direction: row;
     position: fixed;
     width: 100%;
     margin: auto;
-    top: 1px;
+    top: 0px;
     padding:10px;
     font-size:1.1rem;
     height: 90px;
@@ -82,11 +82,6 @@ header nav button{
     border-radius: 40px;
 }
 
-header nav button a{
-    color: var(--black);
-    text-decoration: none;
-}
-
 header nav button:active {
     box-shadow: none;
     transform: translate(5px, 5px);
@@ -95,7 +90,6 @@ header nav button:active {
 button.inverted {
     background-color: var(--vert);
 }
-
 
 /* ------------------------------------HEADER------------------------------------ */
 /* ------------------------------------MAIN------------------------------------ */
@@ -174,7 +168,7 @@ main .left .desc button:active {
 
 main .left .arrow{
     width: 18%;
-    margin-left: 900px;
+    margin-left: 950px;
     margin-top: 50px;
 }
 
@@ -297,7 +291,7 @@ main .centre .right .titre p{
     font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-left:220px;
+    margin-left:250px;
     margin-top: 30px;
 }
 
@@ -307,7 +301,7 @@ main .centre .right .titre h1{
     margin-top: 30px;
     text-transform: uppercase;
     width: 67%;
-    margin-left: -220px;
+    margin-left: -250px;
 }
 
 main .centre .right .desc{
@@ -361,10 +355,6 @@ main .fond-bas{
 /* ------------------------------------HEADER------------------------------------ */
    
     header nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
         margin-left: 10px;
     }
 
