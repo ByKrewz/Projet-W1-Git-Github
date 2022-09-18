@@ -70,4 +70,5 @@ header nav button{
     margin-right: 20px;
     box-shadow: #1b1c1e 5px 5px ;
     background-color: var(--color);
+    border-radius: 40px;
 }
